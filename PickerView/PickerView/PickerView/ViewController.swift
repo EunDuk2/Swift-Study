@@ -34,7 +34,7 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return bankName.count
     }
-    // 피커뷰에 각 은행 명칭을 넘김
+    // 피커뷰에 각 은행 명칭을 넘김 (피커뷰 각 아이템?에 은행 명 출력)
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return bankName[row]
     }
