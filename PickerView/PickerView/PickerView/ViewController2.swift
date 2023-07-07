@@ -57,8 +57,9 @@ extension ViewController2: UIPickerViewDelegate, UIPickerViewDataSource, UITextF
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
         
-        let cancelButton = UIBarButtonItem(title: "취소", style: .plain, target: self, action: #selector(self.cancel))
-        let submitButton = UIBarButtonItem(title: "확인", style: .plain, target: self, action: #selector(self.submit))
+        // 취소버튼, 확인버튼, 2개 버튼 사이의 공간을 위해 flexibleSpace 정의
+        let cancelButton = UIBarButtonItem(title: "취소", style: .plain, target: self, action: #selector(self.cancel)) // 터치시 cancel함수 발동
+        let submitButton = UIBarButtonItem(title: "확인", style: .plain, target: self, action: #selector(self.submit)) // 터치시 submit함수 발동
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         
         toolBar.setItems([cancelButton, flexibleSpace, submitButton], animated: true)
