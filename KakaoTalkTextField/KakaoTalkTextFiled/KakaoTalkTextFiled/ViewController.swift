@@ -9,11 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var preLines: Int = 1
+    
     @IBOutlet var bottomBar: UIView!
     @IBOutlet var textBar: UIView!
     @IBOutlet var btn: UIButton!
     @IBOutlet var textView: UITextView!
     @IBOutlet var btnSend: UIButton!
+    
+    @IBOutlet var textBarHeight: NSLayoutConstraint!
+    @IBOutlet var bottomBarHeight: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,14 +71,28 @@ class ViewController: UIViewController {
 extension ViewController: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         guard let text = textView.text else { return }
+        
+        let numberOfLines = text.components(separatedBy: "\n").count
 
-        // 텍스트 뷰의 contentSize를 기반으로 높이 조정
-        let fixedWidth = textView.frame.size.width
-        let newSize = textView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
-        textView.frame.size = CGSize(width: fixedWidth, height: newSize.height)
-        textBar.frame.size.height = newSize.height
-        bottomBar.frame.size.height = newSize.height
+        let num:CGFloat = 15
+        
+        if(numberOfLines != preLines) {
+            if(numberOfLines > preLines) {
+                bottomBar.frame.origin.y -= num
+                bottomBarHeight.constant += num
+                
+                textBarHeight.constant += num
+            } else {
+                bottomBar.frame.origin.y += num
+                bottomBarHeight.constant -= num
+                
+                textBarHeight.constant -= num
+            }
 
+        }
+                
+        preLines = numberOfLines
+        
         if text.count > 0 {
             btn.isHidden = true
             btnSend.isHidden = false
@@ -82,16 +101,16 @@ extension ViewController: UITextViewDelegate {
             btnSend.isHidden = true
         }
         
-        // 줄바꿈 횟수에 따라 스크롤 활성화/비활성화
-        let numberOfLines = text.components(separatedBy: "\n").count
-        let maxNumberOfLines = 4
-        textView.isScrollEnabled = numberOfLines > maxNumberOfLines
-
-        // 스크롤이 활성화되어 있을 경우 높이 제한
-        if textView.isScrollEnabled {
-            let maxHeight = textView.font!.lineHeight * CGFloat(maxNumberOfLines)
-            textView.frame.size.height = min(newSize.height, maxHeight)
-        }
+//        // 줄바꿈 횟수에 따라 스크롤 활성화/비활성화
+//
+//        let maxNumberOfLines = 4
+//        textView.isScrollEnabled = numberOfLines > maxNumberOfLines
+//
+//        // 스크롤이 활성화되어 있을 경우 높이 제한
+//        if textView.isScrollEnabled {
+//            let maxHeight = textView.font!.lineHeight * CGFloat(maxNumberOfLines)
+//            textView.frame.size.height = min(newSize.height, maxHeight)
+//        }
     }
 }
 

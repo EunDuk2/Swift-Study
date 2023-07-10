@@ -16,17 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eaX-uH-dIm">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eaX-uH-dIm">
                                 <rect key="frame" x="0.0" y="774" width="393" height="78"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ufn-yQ-uU9">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufn-yQ-uU9">
                                         <rect key="frame" x="52" y="5" width="324" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcM-01-CFD">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcM-01-CFD">
                                                 <rect key="frame" x="260" y="6" width="26" height="26"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="Znw-zx-mjj"/>
+                                                    <constraint firstAttribute="width" constant="26" id="zre-M8-emL"/>
+                                                </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="emoticon.png"/>
                                             </button>
@@ -36,15 +37,17 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="#.png"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNu-E6-HRP">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNu-E6-HRP">
                                                 <rect key="frame" x="287" y="-1" width="40" height="40"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="0lR-TQ-EJa"/>
+                                                    <constraint firstAttribute="height" constant="40" id="1Zi-Pj-3h1"/>
+                                                </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="send.png"/>
                                             </button>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IJ7-3B-D42">
-                                                <rect key="frame" x="11" y="4" width="241" height="28"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IJ7-3B-D42">
+                                                <rect key="frame" x="11" y="3" width="241" height="26"/>
                                                 <color key="backgroundColor" red="0.21960784310000001" green="0.21960783" blue="0.22745099660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -52,25 +55,55 @@
                                             </textView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.21960784310000001" green="0.21960783" blue="0.22745099660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="dcM-01-CFD" secondAttribute="bottom" constant="4" id="5Jg-Bo-wwp"/>
+                                            <constraint firstItem="IJ7-3B-D42" firstAttribute="leading" secondItem="ufn-yQ-uU9" secondAttribute="leading" constant="11" id="7gr-ii-RbI"/>
+                                            <constraint firstAttribute="bottom" secondItem="IJ7-3B-D42" secondAttribute="bottom" constant="7" id="Djv-Xr-5T7"/>
+                                            <constraint firstItem="IJ7-3B-D42" firstAttribute="top" secondItem="ufn-yQ-uU9" secondAttribute="top" constant="3" id="H6W-sx-5Iv"/>
+                                            <constraint firstAttribute="trailing" secondItem="IJ7-3B-D42" secondAttribute="trailing" constant="72" id="WEE-b7-dj1"/>
+                                            <constraint firstAttribute="trailing" secondItem="dcM-01-CFD" secondAttribute="trailing" constant="38" id="jwa-Mv-REX"/>
+                                            <constraint firstAttribute="trailing" secondItem="UNu-E6-HRP" secondAttribute="trailing" constant="-3" id="msc-oj-ojJ"/>
+                                            <constraint firstAttribute="height" constant="36" id="y6v-jh-nio"/>
+                                            <constraint firstAttribute="bottom" secondItem="UNu-E6-HRP" secondAttribute="bottom" constant="-3" id="zjf-2V-4TT"/>
+                                        </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WED-nM-PAo">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WED-nM-PAo">
                                         <rect key="frame" x="17" y="11" width="24" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="efU-e6-KrG"/>
+                                            <constraint firstAttribute="height" constant="30" id="jx4-Y2-zEM"/>
+                                        </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="plus.png"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1686274707" green="0.1725490093" blue="0.1764705926" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="ufn-yQ-uU9" firstAttribute="leading" secondItem="eaX-uH-dIm" secondAttribute="leading" constant="52" id="4lm-yh-QHe"/>
+                                    <constraint firstItem="WED-nM-PAo" firstAttribute="bottom" secondItem="ufn-yQ-uU9" secondAttribute="bottom" id="7qa-Ts-sUs"/>
+                                    <constraint firstAttribute="height" constant="78" id="AiQ-8h-uyl"/>
+                                    <constraint firstItem="WED-nM-PAo" firstAttribute="leading" secondItem="eaX-uH-dIm" secondAttribute="leading" constant="17" id="Cen-tw-Mjy"/>
+                                    <constraint firstAttribute="bottom" secondItem="ufn-yQ-uU9" secondAttribute="bottom" constant="37" id="EV2-AB-DQS"/>
+                                    <constraint firstAttribute="trailing" secondItem="ufn-yQ-uU9" secondAttribute="trailing" constant="17" id="eIi-m8-E7g"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.14901961389999999" green="0.14901961389999999" blue="0.15294116739999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="eaX-uH-dIm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K2g-pD-E11"/>
+                            <constraint firstAttribute="bottom" secondItem="eaX-uH-dIm" secondAttribute="bottom" id="KIw-Kf-FqU"/>
+                            <constraint firstItem="eaX-uH-dIm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SdP-eQ-gXd"/>
+                            <constraint firstItem="eaX-uH-dIm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fa6-Hd-87C"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="bottomBar" destination="eaX-uH-dIm" id="wYY-Mi-Cdn"/>
+                        <outlet property="bottomBarHeight" destination="AiQ-8h-uyl" id="4L6-Ed-4VS"/>
                         <outlet property="btn" destination="rPs-tV-jL9" id="iFD-Ad-Ur0"/>
                         <outlet property="btnSend" destination="UNu-E6-HRP" id="mhR-QH-x4p"/>
                         <outlet property="textBar" destination="ufn-yQ-uU9" id="7gB-AA-Cr9"/>
+                        <outlet property="textBarHeight" destination="y6v-jh-nio" id="Z2G-fY-OWt"/>
                         <outlet property="textView" destination="IJ7-3B-D42" id="xYO-Xb-J2c"/>
                     </connections>
                 </viewController>
