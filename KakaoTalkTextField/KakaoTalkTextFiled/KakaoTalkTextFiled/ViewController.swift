@@ -65,6 +65,23 @@ class ViewController: UIViewController {
         textBar.layer.borderColor = UIColor(red: 65/255, green: 66/255, blue: 66/255, alpha: 1).cgColor
 
     }
+    
+    func numberOfLinesInTextView(textView: UITextView) -> Int {
+        let layoutManager = textView.layoutManager
+        let numberOfGlyphs = layoutManager.numberOfGlyphs
+        var lineRange = NSRange(location: 0, length: 0)
+        var lineNumber = 0
+        
+        for index in 0..<numberOfGlyphs {
+            layoutManager.lineFragmentRect(forGlyphAt: index, effectiveRange: &lineRange)
+            if lineRange.location == index {
+                lineNumber += 1
+            }
+        }
+        
+        return lineNumber
+    }
+
 
 }
 
@@ -72,8 +89,11 @@ extension ViewController: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         guard let text = textView.text else { return }
         
-        let numberOfLines = text.components(separatedBy: "\n").count
-
+        //let numberOfLines = text.components(separatedBy: "\n").count
+        var numberOfLines = numberOfLinesInTextView(textView: textView) + (text.components(separatedBy: "\n").count - 1)
+        
+        print(preLines)
+        print(numberOfLines)
         let num:CGFloat = 15
         
         if(numberOfLines != preLines) {
