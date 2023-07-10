@@ -91,6 +91,9 @@ extension ViewController: UITextViewDelegate {
         
         //let numberOfLines = text.components(separatedBy: "\n").count
         var numberOfLines = numberOfLinesInTextView(textView: textView) + (text.components(separatedBy: "\n").count - 1)
+        if(numberOfLines == 0) {
+            numberOfLines = 1
+        }
         
         print(preLines)
         print(numberOfLines)
@@ -102,7 +105,7 @@ extension ViewController: UITextViewDelegate {
                 bottomBarHeight.constant += num
                 
                 textBarHeight.constant += num
-            } else {
+            } else if(numberOfLines < preLines && numberOfLines != 0) {
                 bottomBar.frame.origin.y += num
                 bottomBarHeight.constant -= num
                 
