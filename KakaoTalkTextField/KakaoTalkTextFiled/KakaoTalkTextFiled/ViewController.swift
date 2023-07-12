@@ -101,7 +101,16 @@ class ViewController: UIViewController {
     
     @IBAction func onSend(_ sender: Any) {
         text?.append(textView.text)
+        
+        textView.text = nil
+        btn.isHidden = false
+        btnSend.isHidden = true
+        
         tableTop.constant -= 45
+        if(tableTop.constant < 0) {
+            tableTop.constant = 0
+        }
+        
         table.reloadData()
     }
 
@@ -165,6 +174,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         if let tmpText = text {
             cell.lblText.text = tmpText[indexPath.row]
+            cell.lblText.sizeToFit()
+            cell.cellTextView.sizeToFit()
         }
         
         return cell
