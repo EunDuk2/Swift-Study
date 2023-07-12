@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61A54C312A5EAFA700A3EFF5 /* edge.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A54C302A5EAFA700A3EFF5 /* edge.png */; };
 		61B6E4B12A580AFE007F984B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B6E4B02A580AFE007F984B /* AppDelegate.swift */; };
 		61B6E4B32A580AFE007F984B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B6E4B22A580AFE007F984B /* SceneDelegate.swift */; };
 		61B6E4B52A580AFE007F984B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B6E4B42A580AFE007F984B /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		61A54C302A5EAFA700A3EFF5 /* edge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edge.png; sourceTree = "<group>"; };
 		61B6E4AD2A580AFE007F984B /* KakaoTalkTextFiled.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KakaoTalkTextFiled.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61B6E4B02A580AFE007F984B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61B6E4B22A580AFE007F984B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		61B6E4C42A5818E3007F984B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				61A54C302A5EAFA700A3EFF5 /* edge.png */,
 				61B6E4CD2A58289F007F984B /* send.png */,
 				61B6E4CB2A581AF5007F984B /* #.png */,
 				61B6E4C92A581AA1007F984B /* emoticon.png */,
@@ -148,6 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61A54C312A5EAFA700A3EFF5 /* edge.png in Resources */,
 				61B6E4BD2A580AFF007F984B /* LaunchScreen.storyboard in Resources */,
 				61B6E4C82A58190E007F984B /* plus.png in Resources */,
 				61B6E4CA2A581AA1007F984B /* emoticon.png in Resources */,

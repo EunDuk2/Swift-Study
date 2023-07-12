@@ -100,6 +100,9 @@ class ViewController: UIViewController {
     var text: [String]? = ["test"]
     
     @IBAction func onSend(_ sender: Any) {
+        var numberOfLines = numberOfLinesInTextView(textView: textView) // 현재 라인 수
+        numberOfLines = 1
+        
         text?.append(textView.text)
         
         textView.text = nil
