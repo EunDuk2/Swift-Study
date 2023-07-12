@@ -17,6 +17,7 @@
 		61B6E4CA2A581AA1007F984B /* emoticon.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B6E4C92A581AA1007F984B /* emoticon.png */; };
 		61B6E4CC2A581AF5007F984B /* #.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B6E4CB2A581AF5007F984B /* #.png */; };
 		61B6E4CE2A5828A0007F984B /* send.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B6E4CD2A58289F007F984B /* send.png */; };
+		61D8CF332A5E93A9007DF8C0 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D8CF322A5E93A9007DF8C0 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		61B6E4C92A581AA1007F984B /* emoticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoticon.png; sourceTree = "<group>"; };
 		61B6E4CB2A581AF5007F984B /* #.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "#.png"; sourceTree = "<group>"; };
 		61B6E4CD2A58289F007F984B /* send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = send.png; sourceTree = "<group>"; };
+		61D8CF322A5E93A9007DF8C0 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				61B6E4B02A580AFE007F984B /* AppDelegate.swift */,
 				61B6E4B22A580AFE007F984B /* SceneDelegate.swift */,
 				61B6E4B42A580AFE007F984B /* ViewController.swift */,
+				61D8CF322A5E93A9007DF8C0 /* TableViewCell.swift */,
 				61B6E4B62A580AFE007F984B /* Main.storyboard */,
 				61B6E4B92A580AFF007F984B /* Assets.xcassets */,
 				61B6E4BB2A580AFF007F984B /* LaunchScreen.storyboard */,
@@ -163,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61B6E4B52A580AFE007F984B /* ViewController.swift in Sources */,
+				61D8CF332A5E93A9007DF8C0 /* TableViewCell.swift in Sources */,
 				61B6E4B12A580AFE007F984B /* AppDelegate.swift in Sources */,
 				61B6E4B32A580AFE007F984B /* SceneDelegate.swift in Sources */,
 			);
