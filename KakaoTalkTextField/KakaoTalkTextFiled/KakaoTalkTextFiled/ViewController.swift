@@ -189,7 +189,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         if let tmpText = text {
             cell.lblText.text = tmpText[indexPath.row]
-            cell.lblText.numberOfLines = 2
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "HH:mm"
+
+            let currentTime = Date()
+            let currentTimeString = dateFormatter.string(from: currentTime)
+            
+            cell.lblTime.text = currentTimeString
             
         }
         

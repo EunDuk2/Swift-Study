@@ -90,8 +90,8 @@
                                     <constraint firstAttribute="trailing" secondItem="ufn-yQ-uU9" secondAttribute="trailing" constant="17" id="eIi-m8-E7g"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Feq-Z9-HXv">
-                                <rect key="frame" x="16" y="723" width="361" height="43"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Feq-Z9-HXv">
+                                <rect key="frame" x="16" y="484" width="361" height="282"/>
                                 <color key="backgroundColor" red="0.14901961389999999" green="0.14901961389999999" blue="0.15294116739999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" id="v7J-F1-Oh1" customClass="TableViewCell" customModule="KakaoTalkTextFiled" customModuleProvider="target">
@@ -138,10 +138,23 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18:48" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzN-Rd-u9W">
+                                                    <rect key="frame" x="257" y="26" width="36" height="14"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="14" id="bQl-XN-BKy"/>
+                                                        <constraint firstAttribute="width" constant="36" id="jPi-bI-xuI"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="rWC-0e-Zkv" secondAttribute="trailing" constant="13.67" id="7uv-T6-Jjc"/>
                                                 <constraint firstItem="rWC-0e-Zkv" firstAttribute="top" secondItem="fuQ-3L-G8k" secondAttribute="top" constant="4" id="Hyf-ts-onh"/>
+                                                <constraint firstItem="rWC-0e-Zkv" firstAttribute="leading" secondItem="dzN-Rd-u9W" secondAttribute="trailing" constant="4" id="SeZ-ZN-GDf"/>
+                                                <constraint firstAttribute="bottom" secondItem="dzN-Rd-u9W" secondAttribute="bottom" constant="4" id="hRk-7X-oaW"/>
+                                                <constraint firstItem="dzN-Rd-u9W" firstAttribute="top" secondItem="fuQ-3L-G8k" secondAttribute="top" constant="26" id="wxI-xC-5TI"/>
                                                 <constraint firstAttribute="bottom" secondItem="rWC-0e-Zkv" secondAttribute="bottom" constant="4" id="xfy-SP-rFg"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -149,6 +162,7 @@
                                         <connections>
                                             <outlet property="cellTextView" destination="rWC-0e-Zkv" id="jUl-AP-EaO"/>
                                             <outlet property="lblText" destination="3PW-hW-1fE" id="q2g-4A-e0d"/>
+                                            <outlet property="lblTime" destination="dzN-Rd-u9W" id="O57-Ov-zQz"/>
                                             <outlet property="textHeight" destination="7j8-9J-9oW" id="sUA-59-QfW"/>
                                         </connections>
                                     </tableViewCell>
