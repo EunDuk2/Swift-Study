@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var preLines: Int = 1
+    var numberOfLines:Int = 1// 현재 라인 수
     
     @IBOutlet var bottomBar: UIView!
     @IBOutlet var textBar: UIView!
@@ -24,6 +25,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationSetting()
         
         btnSend.isHidden = true
         textView.delegate = self
@@ -63,6 +65,15 @@ class ViewController: UIViewController {
         // 키보드가 사라질 때 뷰의 변환을 초기화합니다.
         self.view.transform = .identity
     }
+    
+    func navigationSetting() {
+        let navigationBarAppearance = UINavigationBarAppearance()
+        navigationBarAppearance.backgroundColor = UIColor(red: 38/255, green: 38/255, blue: 39/255, alpha: 1)
+        navigationController!.navigationBar.standardAppearance = navigationBarAppearance
+        navigationController!.navigationBar.scrollEdgeAppearance = navigationBarAppearance
+        
+        navigationItem.title = "은덕이"
+    }
 
     func initTextField() {
         textBar.layer.cornerRadius = 18
@@ -100,12 +111,13 @@ class ViewController: UIViewController {
     var text: [String]? = ["test"]
     
     @IBAction func onSend(_ sender: Any) {
-        var numberOfLines = numberOfLinesInTextView(textView: textView) // 현재 라인 수
         numberOfLines = 1
+        bottomBarHeight.constant = 78
+        textBarHeight.constant = 36
         
         text?.append(textView.text)
         
-        textView.text = nil
+        textView.text = ""
         btn.isHidden = false
         btnSend.isHidden = true
         
@@ -124,12 +136,12 @@ extension ViewController: UITextViewDelegate {
         guard let text = textView.text else { return }
         
         // + (text.components(separatedBy: "\n").count - 1)
+        numberOfLines = numberOfLinesInTextView(textView: textView) // 현재 라인 수
         
-        var numberOfLines = numberOfLinesInTextView(textView: textView) // 현재 라인 수
         // preLines는 한 번의 액션 전의 라인 수
 
         let num:CGFloat = 15
-        if(numberOfLines == 0) {
+        if(numberOfLines <= 0) {
             numberOfLines = 1
         }
         
@@ -177,12 +189,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         if let tmpText = text {
             cell.lblText.text = tmpText[indexPath.row]
-            cell.lblText.sizeToFit()
-            cell.cellTextView.sizeToFit()
+            cell.lblText.numberOfLines = 2
+            
         }
         
         return cell
     }
 }
-
 

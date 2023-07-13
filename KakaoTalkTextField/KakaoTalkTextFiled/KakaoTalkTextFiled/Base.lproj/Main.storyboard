@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Nw-jX-hwg">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -91,7 +91,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Feq-Z9-HXv">
-                                <rect key="frame" x="16" y="559" width="361" height="207"/>
+                                <rect key="frame" x="16" y="723" width="361" height="43"/>
                                 <color key="backgroundColor" red="0.14901961389999999" green="0.14901961389999999" blue="0.15294116739999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" id="v7J-F1-Oh1" customClass="TableViewCell" customModule="KakaoTalkTextFiled" customModuleProvider="target">
@@ -104,9 +104,12 @@
                                                 <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="rWC-0e-Zkv">
                                                     <rect key="frame" x="297" y="4" width="50.333333333333314" height="36"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3PW-hW-1fE">
-                                                            <rect key="frame" x="11" y="8" width="34" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3PW-hW-1fE">
+                                                            <rect key="frame" x="10.999999999999998" y="8" width="29.333333333333329" height="21"/>
                                                             <color key="backgroundColor" red="0.97647058959999999" green="0.90196073060000004" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="7j8-9J-9oW"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -146,6 +149,7 @@
                                         <connections>
                                             <outlet property="cellTextView" destination="rWC-0e-Zkv" id="jUl-AP-EaO"/>
                                             <outlet property="lblText" destination="3PW-hW-1fE" id="q2g-4A-e0d"/>
+                                            <outlet property="textHeight" destination="7j8-9J-9oW" id="sUA-59-QfW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -158,7 +162,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.14901961389999999" green="0.14901961389999999" blue="0.15294116739999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="Feq-Z9-HXv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="500" id="4JV-aK-7gG"/>
+                            <constraint firstItem="Feq-Z9-HXv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="620" id="4JV-aK-7gG"/>
                             <constraint firstItem="eaX-uH-dIm" firstAttribute="top" secondItem="Feq-Z9-HXv" secondAttribute="bottom" constant="8" symbolic="YES" id="AxG-nd-1Ua"/>
                             <constraint firstItem="Feq-Z9-HXv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="BIb-Kj-Kez"/>
                             <constraint firstItem="Feq-Z9-HXv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BhN-AP-HXn"/>
@@ -169,6 +173,7 @@
                             <constraint firstItem="eaX-uH-dIm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fa6-Hd-87C"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hx1-ey-GLA"/>
                     <connections>
                         <outlet property="bottomBar" destination="eaX-uH-dIm" id="wYY-Mi-Cdn"/>
                         <outlet property="bottomBarHeight" destination="AiQ-8h-uyl" id="4L6-Ed-4VS"/>
@@ -182,6 +187,24 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066.4122137404579" y="-2.1126760563380285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ymA-Iw-XFB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Nw-jX-hwg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oam-hq-HnZ">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VUb-Vt-qHl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N26-pt-yCP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139.69465648854961" y="-2.1126760563380285"/>
         </scene>
