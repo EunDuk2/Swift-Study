@@ -107,28 +107,43 @@ class ViewController: UIViewController {
         // 전체 라인 수를 반환합니다.
         return lineNumber
     }
+    // 현재시간 시간:분 형식으로 반환
+    func currentTime() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+
+        let currentTime = Date()
+        let currentTimeString = dateFormatter.string(from: currentTime)
+        
+        return currentTimeString
+    }
     
     var text: [String]? = ["test"]
+    var time: [String]? = ["18:48"]
     
     @IBAction func onSend(_ sender: Any) {
+        // 텍스트 뷰 레이아웃 default값
         numberOfLines = 1
         bottomBarHeight.constant = 78
         textBarHeight.constant = 36
         
+        // 텍스트뷰의 텍스트 배열에 추가
         text?.append(textView.text)
+        time?.append(currentTime())
         
         textView.text = ""
         btn.isHidden = false
         btnSend.isHidden = true
         
+        // 톡이 생길 때마다 테이블 뷰 높이를 조절하여 올라가게함
         tableTop.constant -= 45
+        // 테이블 뷰가 맨위까지 올라가면 스크롤로 전환된다.
         if(tableTop.constant < 0) {
             tableTop.constant = 0
         }
         
         table.reloadData()
     }
-
 }
 
 extension ViewController: UITextViewDelegate {
@@ -177,6 +192,7 @@ extension ViewController: UITextViewDelegate {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        // 톡 개수 반환
         if let txtCount: Int = text?.count {
             return txtCount
         }
@@ -187,20 +203,17 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
         
-        if let tmpText = text {
+        if let tmpText = text, let tmpTime = time {
+            // 텍스트 할당
             cell.lblText.text = tmpText[indexPath.row]
             
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "HH:mm"
-
-            let currentTime = Date()
-            let currentTimeString = dateFormatter.string(from: currentTime)
-            
-            cell.lblTime.text = currentTimeString
+            // 시간 텍스트 할당
+            cell.lblTime.text = tmpTime[indexPath.row]
             
         }
         
         return cell
     }
+    
 }
 
