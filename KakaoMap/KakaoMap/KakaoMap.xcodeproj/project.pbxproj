@@ -13,7 +13,6 @@
 		61C8455D2A6576FF00139C15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61C8455B2A6576FF00139C15 /* Main.storyboard */; };
 		61C8455F2A65770000139C15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C8455E2A65770000139C15 /* Assets.xcassets */; };
 		61C845622A65770000139C15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61C845602A65770000139C15 /* LaunchScreen.storyboard */; };
-		61C8456A2A657B3B00139C15 /* DaumMap.embeddedframework in Resources */ = {isa = PBXBuildFile; fileRef = 61C845692A657B3B00139C15 /* DaumMap.embeddedframework */; };
 		61C8456D2A657BAC00139C15 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C8456C2A657BAC00139C15 /* OpenGLES.framework */; };
 		61C8456F2A657E1700139C15 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C8456E2A657E1700139C15 /* SystemConfiguration.framework */; };
 		61C845712A657E2A00139C15 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C845702A657E2A00139C15 /* CoreLocation.framework */; };
@@ -21,7 +20,24 @@
 		61C845762A657E7100139C15 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C845752A657E6100139C15 /* libxml2.tbd */; };
 		61C845772A657E7800139C15 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C845742A657E5300139C15 /* libc++.tbd */; };
 		61C845792A657E9000139C15 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C845782A657E8800139C15 /* libsqlite3.tbd */; };
+		61C8457B2A657EF900139C15 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C8457A2A657EF900139C15 /* Metal.framework */; };
+		61C845822A6584A100139C15 /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C845812A6584A100139C15 /* DaumMap.framework */; };
+		61C845832A6584A100139C15 /* DaumMap.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61C845812A6584A100139C15 /* DaumMap.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		61C845842A6584A100139C15 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				61C845832A6584A100139C15 /* DaumMap.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		61C845522A6576FF00139C15 /* KakaoMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KakaoMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,7 +48,6 @@
 		61C8455E2A65770000139C15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61C845612A65770000139C15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61C845632A65770000139C15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		61C845692A657B3B00139C15 /* DaumMap.embeddedframework */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DaumMap.embeddedframework; sourceTree = "<group>"; };
 		61C8456C2A657BAC00139C15 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		61C8456E2A657E1700139C15 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		61C845702A657E2A00139C15 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -40,6 +55,10 @@
 		61C845742A657E5300139C15 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		61C845752A657E6100139C15 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		61C845782A657E8800139C15 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		61C8457A2A657EF900139C15 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		61C8457D2A65830C00139C15 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = SOURCE_ROOT; };
+		61C845802A65847900139C15 /* DaumMap.embeddedframework */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DaumMap.embeddedframework; sourceTree = "<group>"; };
+		61C845812A6584A100139C15 /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DaumMap.framework; path = DaumMap.embeddedframework/DaumMap.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +72,8 @@
 				61C845732A657E3B00139C15 /* QuartzCore.framework in Frameworks */,
 				61C845712A657E2A00139C15 /* CoreLocation.framework in Frameworks */,
 				61C8456F2A657E1700139C15 /* SystemConfiguration.framework in Frameworks */,
+				61C8457B2A657EF900139C15 /* Metal.framework in Frameworks */,
+				61C845822A6584A100139C15 /* DaumMap.framework in Frameworks */,
 				61C8456D2A657BAC00139C15 /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,7 +84,6 @@
 		61C845492A6576FF00139C15 = {
 			isa = PBXGroup;
 			children = (
-				61C845692A657B3B00139C15 /* DaumMap.embeddedframework */,
 				61C845542A6576FF00139C15 /* KakaoMap */,
 				61C845532A6576FF00139C15 /* Products */,
 				61C8456B2A657BAC00139C15 /* Frameworks */,
@@ -81,6 +101,7 @@
 		61C845542A6576FF00139C15 /* KakaoMap */ = {
 			isa = PBXGroup;
 			children = (
+				61C8457D2A65830C00139C15 /* Header.h */,
 				61C845552A6576FF00139C15 /* AppDelegate.swift */,
 				61C845572A6576FF00139C15 /* SceneDelegate.swift */,
 				61C845592A6576FF00139C15 /* ViewController.swift */,
@@ -95,6 +116,9 @@
 		61C8456B2A657BAC00139C15 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61C845802A65847900139C15 /* DaumMap.embeddedframework */,
+				61C845812A6584A100139C15 /* DaumMap.framework */,
+				61C8457A2A657EF900139C15 /* Metal.framework */,
 				61C845782A657E8800139C15 /* libsqlite3.tbd */,
 				61C845752A657E6100139C15 /* libxml2.tbd */,
 				61C845742A657E5300139C15 /* libc++.tbd */,
@@ -116,6 +140,7 @@
 				61C8454E2A6576FF00139C15 /* Sources */,
 				61C8454F2A6576FF00139C15 /* Frameworks */,
 				61C845502A6576FF00139C15 /* Resources */,
+				61C845842A6584A100139C15 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,7 +189,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61C8456A2A657B3B00139C15 /* DaumMap.embeddedframework in Resources */,
 				61C845622A65770000139C15 /* LaunchScreen.storyboard in Resources */,
 				61C8455F2A65770000139C15 /* Assets.xcassets in Resources */,
 				61C8455D2A6576FF00139C15 /* Main.storyboard in Resources */,
@@ -325,9 +349,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 53TT286T39;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DaumMap.embeddedframework",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KakaoMap/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -343,6 +372,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.macnpc.KakaoMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/eunsung/Documents/Swift_Study/KakaoMap/KakaoMap/KakaoMap/Header.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -353,9 +383,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 53TT286T39;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DaumMap.embeddedframework",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KakaoMap/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -371,6 +406,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.macnpc.KakaoMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/eunsung/Documents/Swift_Study/KakaoMap/KakaoMap/KakaoMap/Header.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
