@@ -50,13 +50,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2fH-tI-wso" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7te-lu-xPi"/>
-                            <constraint firstItem="2fH-tI-wso" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8kG-xc-Lyb"/>
-                            <constraint firstItem="2fH-tI-wso" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OMN-Xu-2Jg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2fH-tI-wso" secondAttribute="trailing" constant="16" id="RLT-Ii-ubX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2fH-tI-wso" secondAttribute="trailing" constant="16" id="3nd-np-bQY"/>
+                            <constraint firstItem="2fH-tI-wso" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hpM-Pl-RBd"/>
+                            <constraint firstItem="2fH-tI-wso" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="q6O-Xl-jkW"/>
+                            <constraint firstItem="2fH-tI-wso" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yu7-UH-Meh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bc7-z3-598"/>
+                    <navigationItem key="navigationItem" id="bc7-z3-598">
+                        <nil key="title"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="table" destination="2fH-tI-wso" id="sko-cL-Ldj"/>
                     </connections>

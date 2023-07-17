@@ -17,16 +17,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var table: UITableView!
     var searchController: UISearchController!
-    var filteredUni: [String] = ["서울대학교",
-                                 "연세대학교",
-                                 "고려대학교",
-                                 "한양대학교",
-                                 "성균관대학교",
-                                 "서강대학교",
-                                 "이화여자대학교",
-                                 "중앙대학교",
-                                 "경희대학교",
-                                 "한국외국어대학교"] // 검색 결과를 담을 배열
+    var filteredUni: [String] = [] // 검색 결과를 담을 배열
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +29,8 @@ class ViewController: UIViewController {
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
         navigationItem.searchController = searchController
+        searchController.searchBar.placeholder = "대학교 검색"
+        searchController.definesPresentationContext = true
     }
 }
 
@@ -68,15 +61,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 extension ViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
-        if let searchText = searchController.searchBar.text {
-            filterDataWithSearchText(searchText)
+        guard let searchText = searchController.searchBar.text else { return }
+        
+        if(searchText != "") {
+            filteredUni = uni.filter { $0.contains(searchText) }
             table.reloadData()
-        }
+        }  
     }
     
-    func filterDataWithSearchText(_ searchText: String) {
-        // 검색어가 포함된 학교만 필터링하여 filteredUni에 저장
-        filteredUni = uni.filter { $0.contains(searchText) }
-    }
 }
 
