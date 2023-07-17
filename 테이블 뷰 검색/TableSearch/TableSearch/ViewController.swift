@@ -2,6 +2,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // 테이블 뷰를 구성할 배열 선언
     let uni:[String] = [
         "서울대학교",
         "연세대학교",
@@ -24,13 +25,13 @@ class ViewController: UIViewController {
         
         searchControllerSetting()
     }
-    
+    // UISearchController를 만들어 적용
     func searchControllerSetting() {
         searchController = UISearchController(searchResultsController: nil)
+        navigationItem.searchController = searchController // 네비게이션 바에 검색바 적용
+        // 검색 내용이 바뀔때 마다 동작을 주기 위해, UISearchResultsUpdating프로토콜을 ViewController가 구현함
         searchController.searchResultsUpdater = self
-        navigationItem.searchController = searchController
-        searchController.searchBar.placeholder = "대학교 검색"
-        searchController.definesPresentationContext = true
+        searchController.searchBar.placeholder = "대학교 검색" // placeholer설정
     }
 }
 
@@ -59,14 +60,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension ViewController: UISearchResultsUpdating {
-    
+    // 검색 결과가 바뀔때 마다 업데이트 됨
     func updateSearchResults(for searchController: UISearchController) {
+        // 검색 바의 텍스트
         guard let searchText = searchController.searchBar.text else { return }
         
+        // 검색 바의 텍스트가 포함된 값들만 filteredUni에 담음
         if(searchText != "") {
             filteredUni = uni.filter { $0.contains(searchText) }
             table.reloadData()
-        }  
+        }
     }
     
 }
