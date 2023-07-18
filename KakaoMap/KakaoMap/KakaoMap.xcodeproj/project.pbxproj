@@ -21,8 +21,6 @@
 		61C845772A657E7800139C15 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C845742A657E5300139C15 /* libc++.tbd */; };
 		61C845792A657E9000139C15 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C845782A657E8800139C15 /* libsqlite3.tbd */; };
 		61C8457B2A657EF900139C15 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C8457A2A657EF900139C15 /* Metal.framework */; };
-		61C845822A6584A100139C15 /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C845812A6584A100139C15 /* DaumMap.framework */; };
-		61C845832A6584A100139C15 /* DaumMap.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61C845812A6584A100139C15 /* DaumMap.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,7 +30,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				61C845832A6584A100139C15 /* DaumMap.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,7 +55,6 @@
 		61C8457A2A657EF900139C15 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		61C8457D2A65830C00139C15 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = SOURCE_ROOT; };
 		61C845802A65847900139C15 /* DaumMap.embeddedframework */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DaumMap.embeddedframework; sourceTree = "<group>"; };
-		61C845812A6584A100139C15 /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DaumMap.framework; path = DaumMap.embeddedframework/DaumMap.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +69,6 @@
 				61C845712A657E2A00139C15 /* CoreLocation.framework in Frameworks */,
 				61C8456F2A657E1700139C15 /* SystemConfiguration.framework in Frameworks */,
 				61C8457B2A657EF900139C15 /* Metal.framework in Frameworks */,
-				61C845822A6584A100139C15 /* DaumMap.framework in Frameworks */,
 				61C8456D2A657BAC00139C15 /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				61C845802A65847900139C15 /* DaumMap.embeddedframework */,
-				61C845812A6584A100139C15 /* DaumMap.framework */,
 				61C8457A2A657EF900139C15 /* Metal.framework */,
 				61C845782A657E8800139C15 /* libsqlite3.tbd */,
 				61C845752A657E6100139C15 /* libxml2.tbd */,
@@ -364,6 +358,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -398,6 +393,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
