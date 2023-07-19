@@ -15,21 +15,28 @@ class ViewController: UIViewController, MTMapViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        setupMapView()
+        createPin(itemName: "롯데월드", mapPoint: MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.511545, longitude: 127.098609)), markerType: .yellowPin)
+        
+        mapView.fitAreaToShowAllPOIItems()
+    }
+    // 맵 생성
+    func setupMapView() {
         mapView = MTMapView(frame: self.view.bounds)
         mapView.delegate = self
         mapView.baseMapType = .standard
         self.view.addSubview(mapView)
-        
-        let poiItem1 = MTMapPOIItem()
-        
-        poiItem1.itemName = "롯데월드"
-        poiItem1.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.511545, longitude: 127.098609))
-        poiItem1.markerType = .redPin
-        
-        mapView.addPOIItems([poiItem1])
-        
-        //mapView.fitAreaToShowAllPOIItems()
     }
-
+    // 핀 생성
+    func createPin(itemName:String, mapPoint:MTMapPoint, markerType:MTMapPOIItemMarkerType) {
+        let poiItem = MTMapPOIItem()
+        
+        poiItem.itemName = "\(itemName)"
+        poiItem.mapPoint = mapPoint
+        poiItem.markerType = markerType
+        
+        mapView.addPOIItems([poiItem])
+    }
+    
 }
 
