@@ -32,6 +32,16 @@
                                     <action selector="onTrackMyLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KAo-82-SBw"/>
                                 </connections>
                             </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-12" maximumValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="kdS-lk-wxJ">
+                                <rect key="frame" x="107" y="772" width="94" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="Biv-1e-VGO"/>
+                                    <constraint firstAttribute="height" constant="32" id="X6S-uZ-cgn"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="onStepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="NPh-he-Roa"/>
+                                </connections>
+                            </stepper>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -42,6 +52,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YBr-gh-Zzm" secondAttribute="bottom" constant="73" id="Nhu-gV-Pdx"/>
                             <constraint firstItem="YBr-gh-Zzm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YF7-Zg-gIk"/>
                             <constraint firstItem="YBr-gh-Zzm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rnf-Ta-I7V"/>
+                            <constraint firstItem="kdS-lk-wxJ" firstAttribute="top" secondItem="YBr-gh-Zzm" secondAttribute="bottom" constant="27" id="us5-Uw-dOn"/>
+                            <constraint firstItem="kdS-lk-wxJ" firstAttribute="leading" secondItem="x1h-qt-unE" secondAttribute="trailing" constant="16" id="uzi-XE-bOe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6xu-oI-Dad"/>

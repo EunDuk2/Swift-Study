@@ -22,11 +22,18 @@ class ViewController: UIViewController {
         createPin(itemName: "롯데월드", mapPoint: MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.511545, longitude: 127.098609)), markerType: .redPin)
         
         mapView.fitAreaToShowAllPOIItems()
+        // 기본 확대 레벨 설정
+        mapView.setZoomLevel(0, animated: true)
     }
     
     @IBAction func onTrackMyLocation(_ sender: Any) {
         trackMyLocation()
     }
+    @IBAction func onStepper(_ sender: UIStepper) {
+        print(sender.value)
+        mapView.setZoomLevel(Int32(-sender.value), animated: true)
+    }
+    
 }
 
 extension ViewController: MTMapViewDelegate {
