@@ -20,11 +20,25 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="686"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1h-qt-unE">
+                                <rect key="frame" x="18" y="769" width="73" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Hhg-bX-gGE"/>
+                                    <constraint firstAttribute="width" constant="73" id="TKa-Nh-NU0"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="내 위치"/>
+                                <connections>
+                                    <action selector="onTrackMyLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KAo-82-SBw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="x1h-qt-unE" firstAttribute="top" secondItem="YBr-gh-Zzm" secondAttribute="bottom" constant="24" id="AcL-zW-6Db"/>
                             <constraint firstItem="YBr-gh-Zzm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CgL-bI-ZU4"/>
+                            <constraint firstItem="x1h-qt-unE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="GCJ-F9-DLd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YBr-gh-Zzm" secondAttribute="bottom" constant="73" id="Nhu-gV-Pdx"/>
                             <constraint firstItem="YBr-gh-Zzm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YF7-Zg-gIk"/>
                             <constraint firstItem="YBr-gh-Zzm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rnf-Ta-I7V"/>
