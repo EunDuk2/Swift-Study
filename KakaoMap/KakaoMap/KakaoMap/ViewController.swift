@@ -6,6 +6,7 @@
 //
 // 내 위치로 가는 기능
 // 핀 버튼
+// 확대 축소 기능
 // 주소 적으면 위도, 경도로 바꿔서 핀 찍어주는 기능
 import UIKit
 
@@ -13,6 +14,7 @@ class ViewController: UIViewController {
     
     var mapView:MTMapView!
     @IBOutlet var mapSubView: UIView!
+    var zoomLv:Double = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +33,14 @@ class ViewController: UIViewController {
     }
     @IBAction func onStepper(_ sender: UIStepper) {
         print(sender.value)
-        mapView.setZoomLevel(Int32(-sender.value), animated: true)
+        
+        if(zoomLv < sender.value) {
+            mapView.setZoomLevel(mapView.zoomLevel - 1, animated: true)
+        } else {
+            mapView.setZoomLevel(mapView.zoomLevel + 1, animated: true)
+        }
+        
+        zoomLv = sender.value
     }
     
 }
@@ -55,6 +64,7 @@ extension ViewController: MTMapViewDelegate {
         let customCalloutView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
         customCalloutView.backgroundColor = .white
         
+        // 뷰에 레이블을 추가하고 itemName출력
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
         label.textColor = .black
         label.textAlignment = .center
@@ -70,11 +80,14 @@ extension ViewController: MTMapViewDelegate {
 
     // 내 위치로 트래킹
     func trackMyLocation() {
+        // 사용자 위치에 마커 찍기
         mapView.showCurrentLocationMarker = true
+        // 사용자 위치로 지도가 이동, 사용자가 움직이면 지도도 따라감
         mapView.currentLocationTrackingMode = .onWithoutHeading
     }
-    
+    // 말풍선을 터치했을 때 액션
     func mapView(_ mapView: MTMapView!, touchedCalloutBalloonOf poiItem: MTMapPOIItem!) {
+        // 웹뷰를 담고 있는 컨트롤러를 푸시
         let ViewController2 = storyboard!.instantiateViewController(withIdentifier: "ViewController2") as! ViewController2
         navigationController?.pushViewController(ViewController2, animated: true)
     }

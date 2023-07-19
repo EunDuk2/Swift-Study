@@ -32,7 +32,7 @@
                                     <action selector="onTrackMyLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KAo-82-SBw"/>
                                 </connections>
                             </button>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-12" maximumValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="kdS-lk-wxJ">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-50" maximumValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="kdS-lk-wxJ">
                                 <rect key="frame" x="107" y="772" width="94" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="94" id="Biv-1e-VGO"/>
