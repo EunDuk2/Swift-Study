@@ -61,20 +61,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UDF-Aw-pna">
-                                <rect key="frame" x="0.0" y="59" width="393" height="751"/>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H1v-Gm-Kgw">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SSo-ua-j5N"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UDF-Aw-pna" firstAttribute="trailing" secondItem="SSo-ua-j5N" secondAttribute="trailing" id="1xB-Fm-LTD"/>
-                            <constraint firstItem="SSo-ua-j5N" firstAttribute="bottom" secondItem="UDF-Aw-pna" secondAttribute="bottom" constant="8" id="6a0-pv-6Sd"/>
-                            <constraint firstItem="UDF-Aw-pna" firstAttribute="leading" secondItem="SSo-ua-j5N" secondAttribute="leading" id="Hi8-aH-fuw"/>
-                            <constraint firstItem="UDF-Aw-pna" firstAttribute="top" secondItem="SSo-ua-j5N" secondAttribute="top" id="Yhm-3u-ke1"/>
+                            <constraint firstItem="H1v-Gm-Kgw" firstAttribute="bottom" secondItem="SSo-ua-j5N" secondAttribute="bottom" id="blq-i2-CrG"/>
+                            <constraint firstItem="H1v-Gm-Kgw" firstAttribute="leading" secondItem="SSo-ua-j5N" secondAttribute="leading" id="ny0-FU-iMH"/>
+                            <constraint firstItem="H1v-Gm-Kgw" firstAttribute="trailing" secondItem="SSo-ua-j5N" secondAttribute="trailing" id="sXL-cH-FYw"/>
+                            <constraint firstItem="H1v-Gm-Kgw" firstAttribute="top" secondItem="SSo-ua-j5N" secondAttribute="top" id="v9k-RP-4eH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="H1v-Gm-Kgw" id="U76-pd-XB0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ys4-z1-SXM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
