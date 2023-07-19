@@ -4,13 +4,15 @@
 //
 //  Created by EUNSUNG on 2023/07/17.
 //
-
+// 내 위치로 가는 기능
+// 주소 적으면 위도, 경도로 바꿔서 핀 찍어주는 기능
 import UIKit
 
 class ViewController: UIViewController, MTMapViewDelegate {
     
     var mapView:MTMapView!
-
+    @IBOutlet var mapSubView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -22,10 +24,11 @@ class ViewController: UIViewController, MTMapViewDelegate {
     }
     // 맵 생성
     func setupMapView() {
-        mapView = MTMapView(frame: self.view.bounds)
+        mapView = MTMapView(frame: mapSubView.bounds)
         mapView.delegate = self
         mapView.baseMapType = .standard
-        self.view.addSubview(mapView)
+        mapSubView.addSubview(mapView)
+        //self.view.addSubview(mapView)
     }
     // 핀 생성
     func createPin(itemName:String, mapPoint:MTMapPoint, markerType:MTMapPOIItemMarkerType) {
