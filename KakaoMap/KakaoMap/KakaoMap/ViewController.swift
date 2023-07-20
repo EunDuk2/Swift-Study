@@ -9,6 +9,7 @@
 // 확대 축소 기능
 // 주소 적으면 위도, 경도로 바꿔서 핀 찍어주는 기능
 import UIKit
+import CoreLocation
 
 class ViewController: UIViewController {
     
@@ -22,27 +23,38 @@ class ViewController: UIViewController {
         
         setupMapView()
         createPin(itemName: "롯데월드", mapPoint: MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.511545, longitude: 127.098609)), markerType: .redPin)
+        addPinForAddress("경기도 시흥시 금오로118번안길 19-4")
         
         mapView.fitAreaToShowAllPOIItems()
         // 기본 확대 레벨 설정
         mapView.setZoomLevel(0, animated: true)
     }
     
+    func addPinForAddress(_ address: String) {
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(address) { (placemarks, error) in
+            if let error = error {
+                print("Error geocoding address: \(error.localizedDescription)")
+            } else if let placemark = placemarks?.first,
+                      let location = placemark.location {
+                // 주소를 위도와 경도로 변환한 위치에 핀을 찍어줍니다.
+                self.createPin(itemName: address, mapPoint: MTMapPoint(geoCoord: MTMapPointGeo(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
+                , markerType: .redPin)
+            }
+        }
+    }
+    
     @IBAction func onTrackMyLocation(_ sender: Any) {
         trackMyLocation()
     }
     @IBAction func onStepper(_ sender: UIStepper) {
-        print(sender.value)
-        
-        if(zoomLv < sender.value) {
+        if(zoomLv < sender.value) { // + 버튼 터치시 확대
             mapView.setZoomLevel(mapView.zoomLevel - 1, animated: true)
-        } else {
+        } else { // - 버튼 터치시 축소
             mapView.setZoomLevel(mapView.zoomLevel + 1, animated: true)
         }
-        
         zoomLv = sender.value
     }
-    
 }
 
 extension ViewController: MTMapViewDelegate {
