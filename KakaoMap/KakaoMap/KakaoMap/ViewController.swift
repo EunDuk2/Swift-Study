@@ -72,6 +72,8 @@ extension ViewController: MTMapViewDelegate {
         mapView.baseMapType = .standard
         mapSubView.addSubview(mapView)
     }
+
+
     // 핀 생성
     func createPin(itemName: String, mapPoint: MTMapPoint, markerType: MTMapPOIItemMarkerType) {
         let poiItem = MTMapPOIItem()
@@ -104,6 +106,15 @@ extension ViewController: MTMapViewDelegate {
         // 사용자 위치로 지도가 이동, 사용자가 움직이면 지도도 따라감
         mapView.currentLocationTrackingMode = .onWithoutHeading
     }
+    // 더블 탭 이벤트 처리
+    func mapView(_ mapView: MTMapView!, doubleTapOn mapPoint: MTMapPoint!) {
+        let mapPointGeo = mapPoint.mapPointGeo()
+
+        print("탭한 지점의 위도: \(mapPointGeo.latitude), 경도: \(mapPointGeo.longitude)")
+        
+        createPin(itemName: "임시 핀", mapPoint: MTMapPoint(geoCoord: MTMapPointGeo(latitude: mapPointGeo.latitude, longitude: mapPointGeo.longitude)), markerType: .yellowPin)
+    }
+    
     // 말풍선을 터치했을 때 액션
     func mapView(_ mapView: MTMapView!, touchedCalloutBalloonOf poiItem: MTMapPOIItem!) {
         // 웹뷰를 담고 있는 컨트롤러를 푸시

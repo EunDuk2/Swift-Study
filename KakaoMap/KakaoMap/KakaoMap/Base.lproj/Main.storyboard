@@ -43,16 +43,16 @@
                                 </connections>
                             </stepper>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="서울 용산구 남산공원길 105" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vbd-fr-fAu">
-                                <rect key="frame" x="115" y="753" width="262" height="34"/>
+                                <rect key="frame" x="110" y="753" width="184" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="262" id="7iA-s7-wEj"/>
+                                    <constraint firstAttribute="width" constant="184" id="28i-uB-aQU"/>
                                     <constraint firstAttribute="height" constant="34" id="jjZ-SZ-eqC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zee-eM-gL2">
-                                <rect key="frame" x="323" y="789" width="54" height="35"/>
+                                <rect key="frame" x="316" y="753" width="54" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Jlv-as-S9j"/>
                                     <constraint firstAttribute="width" constant="54" id="i1k-2E-sXo"/>
@@ -67,18 +67,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zee-eM-gL2" secondAttribute="trailing" constant="16" id="3Jm-zw-Jin"/>
-                            <constraint firstItem="zee-eM-gL2" firstAttribute="top" secondItem="vbd-fr-fAu" secondAttribute="bottom" constant="2" id="3yc-c0-jj1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vbd-fr-fAu" secondAttribute="trailing" constant="16" id="7DB-5E-FtH"/>
                             <constraint firstItem="YBr-gh-Zzm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CgL-bI-ZU4"/>
                             <constraint firstItem="x1h-qt-unE" firstAttribute="top" secondItem="YBr-gh-Zzm" secondAttribute="bottom" constant="8" symbolic="YES" id="Lvs-F1-E7T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zee-eM-gL2" secondAttribute="trailing" constant="23" id="NbW-2e-3JH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YBr-gh-Zzm" secondAttribute="bottom" constant="73" id="Nhu-gV-Pdx"/>
                             <constraint firstItem="kdS-lk-wxJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Oeo-t9-hFy"/>
                             <constraint firstItem="x1h-qt-unE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="RxJ-rO-UKc"/>
+                            <constraint firstItem="zee-eM-gL2" firstAttribute="top" secondItem="YBr-gh-Zzm" secondAttribute="bottom" constant="8" symbolic="YES" id="WZI-9O-zYZ"/>
                             <constraint firstItem="YBr-gh-Zzm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YF7-Zg-gIk"/>
                             <constraint firstItem="vbd-fr-fAu" firstAttribute="top" secondItem="YBr-gh-Zzm" secondAttribute="bottom" constant="8" symbolic="YES" id="YIg-98-FEs"/>
                             <constraint firstItem="kdS-lk-wxJ" firstAttribute="top" secondItem="x1h-qt-unE" secondAttribute="bottom" constant="2" id="nHp-uI-idA"/>
                             <constraint firstItem="YBr-gh-Zzm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rnf-Ta-I7V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vbd-fr-fAu" secondAttribute="trailing" constant="99" id="vxR-VU-A6r"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6xu-oI-Dad"/>
