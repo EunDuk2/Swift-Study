@@ -21,10 +21,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1h-qt-unE">
-                                <rect key="frame" x="18" y="769" width="73" height="35"/>
+                                <rect key="frame" x="16" y="753" width="73" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="Hhg-bX-gGE"/>
-                                    <constraint firstAttribute="width" constant="73" id="TKa-Nh-NU0"/>
+                                    <constraint firstAttribute="width" constant="73" id="ell-ux-qdf"/>
+                                    <constraint firstAttribute="height" constant="35" id="zxG-bJ-kKd"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="내 위치"/>
@@ -33,32 +33,58 @@
                                 </connections>
                             </button>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-50" maximumValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="kdS-lk-wxJ">
-                                <rect key="frame" x="107" y="772" width="94" height="32"/>
+                                <rect key="frame" x="16" y="790" width="94" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="94" id="Biv-1e-VGO"/>
-                                    <constraint firstAttribute="height" constant="32" id="X6S-uZ-cgn"/>
+                                    <constraint firstAttribute="width" constant="94" id="D8i-WN-IPb"/>
+                                    <constraint firstAttribute="height" constant="32" id="uUq-b3-zdc"/>
                                 </constraints>
                                 <connections>
                                     <action selector="onStepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="NPh-he-Roa"/>
                                 </connections>
                             </stepper>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="서울 용산구 남산공원길 105" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vbd-fr-fAu">
+                                <rect key="frame" x="115" y="753" width="262" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="262" id="7iA-s7-wEj"/>
+                                    <constraint firstAttribute="height" constant="34" id="jjZ-SZ-eqC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zee-eM-gL2">
+                                <rect key="frame" x="323" y="789" width="54" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Jlv-as-S9j"/>
+                                    <constraint firstAttribute="width" constant="54" id="i1k-2E-sXo"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="검색"/>
+                                <connections>
+                                    <action selector="onSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hxa-HS-PwV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="x1h-qt-unE" firstAttribute="top" secondItem="YBr-gh-Zzm" secondAttribute="bottom" constant="24" id="AcL-zW-6Db"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zee-eM-gL2" secondAttribute="trailing" constant="16" id="3Jm-zw-Jin"/>
+                            <constraint firstItem="zee-eM-gL2" firstAttribute="top" secondItem="vbd-fr-fAu" secondAttribute="bottom" constant="2" id="3yc-c0-jj1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vbd-fr-fAu" secondAttribute="trailing" constant="16" id="7DB-5E-FtH"/>
                             <constraint firstItem="YBr-gh-Zzm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CgL-bI-ZU4"/>
-                            <constraint firstItem="x1h-qt-unE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="GCJ-F9-DLd"/>
+                            <constraint firstItem="x1h-qt-unE" firstAttribute="top" secondItem="YBr-gh-Zzm" secondAttribute="bottom" constant="8" symbolic="YES" id="Lvs-F1-E7T"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YBr-gh-Zzm" secondAttribute="bottom" constant="73" id="Nhu-gV-Pdx"/>
+                            <constraint firstItem="kdS-lk-wxJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Oeo-t9-hFy"/>
+                            <constraint firstItem="x1h-qt-unE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="RxJ-rO-UKc"/>
                             <constraint firstItem="YBr-gh-Zzm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YF7-Zg-gIk"/>
+                            <constraint firstItem="vbd-fr-fAu" firstAttribute="top" secondItem="YBr-gh-Zzm" secondAttribute="bottom" constant="8" symbolic="YES" id="YIg-98-FEs"/>
+                            <constraint firstItem="kdS-lk-wxJ" firstAttribute="top" secondItem="x1h-qt-unE" secondAttribute="bottom" constant="2" id="nHp-uI-idA"/>
                             <constraint firstItem="YBr-gh-Zzm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rnf-Ta-I7V"/>
-                            <constraint firstItem="kdS-lk-wxJ" firstAttribute="top" secondItem="YBr-gh-Zzm" secondAttribute="bottom" constant="27" id="us5-Uw-dOn"/>
-                            <constraint firstItem="kdS-lk-wxJ" firstAttribute="leading" secondItem="x1h-qt-unE" secondAttribute="trailing" constant="16" id="uzi-XE-bOe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6xu-oI-Dad"/>
                     <connections>
                         <outlet property="mapSubView" destination="YBr-gh-Zzm" id="uV3-Y9-H5N"/>
+                        <outlet property="textField" destination="vbd-fr-fAu" id="KxX-bl-5Q4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     var mapView:MTMapView!
     @IBOutlet var mapSubView: UIView!
+    @IBOutlet var textField: UITextField!
     var zoomLv:Double = 0.0
     
     override func viewDidLoad() {
@@ -23,7 +24,6 @@ class ViewController: UIViewController {
         
         setupMapView()
         createPin(itemName: "롯데월드", mapPoint: MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.511545, longitude: 127.098609)), markerType: .redPin)
-        addPinForAddress("경기도 시흥시 금오로118번안길 19-4")
         
         mapView.fitAreaToShowAllPOIItems()
         // 기본 확대 레벨 설정
@@ -31,17 +31,24 @@ class ViewController: UIViewController {
     }
     
     func addPinForAddress(_ address: String) {
+        // 지리적인 정보를 처리하는 CLGeocoder 사용
         let geocoder = CLGeocoder()
+        // 주소를 지리적인 정보로 변환하고
         geocoder.geocodeAddressString(address) { (placemarks, error) in
-            if let error = error {
+            if let error = error { // 변환 중 오류가 발생하면 오류 메시지 출력
                 print("Error geocoding address: \(error.localizedDescription)")
             } else if let placemark = placemarks?.first,
-                      let location = placemark.location {
-                // 주소를 위도와 경도로 변환한 위치에 핀을 찍어줍니다.
+                      let location = placemark.location { // 변환된 지리 정보로 위치 저장
+                // 주소를 위도와 경도로 변환한 위치에 핀을 생성
                 self.createPin(itemName: address, mapPoint: MTMapPoint(geoCoord: MTMapPointGeo(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
                 , markerType: .redPin)
+                // 핀이 찍힌 위치로 이동
+                self.mapView.setMapCenter(MTMapPoint(geoCoord: MTMapPointGeo(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)), animated: true)
             }
         }
+    }
+    @IBAction func onSearch(_ sender: Any) {
+        addPinForAddress(textField.text!)
     }
     
     @IBAction func onTrackMyLocation(_ sender: Any) {
