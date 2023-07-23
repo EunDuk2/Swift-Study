@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--item1-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="yanolja" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="item1" id="ZS2-dW-oiL">
+                    <tabBarItem key="tabBarItem" title="" image="지역1.png" selectedImage="지역2.png" id="ZS2-dW-oiL">
+                        <inset key="imageInsets" minX="0.0" minY="30" maxX="0.0" maxY="15"/>
                         <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                 </viewController>
@@ -26,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="1052.6717557251909" y="4.9295774647887329"/>
         </scene>
-        <!--Item4-->
+        <!--View Controller-->
         <scene sceneID="uUQ-S2-DhQ">
             <objects>
                 <viewController id="fLr-al-72A" sceneMemberID="viewController">
@@ -36,13 +37,15 @@
                         <viewLayoutGuide key="safeArea" id="bqD-4O-hZL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item4" id="fMa-Ot-KjR"/>
+                    <tabBarItem key="tabBarItem" title="" image="찜1.png" selectedImage="찜2.png" id="fMa-Ot-KjR">
+                        <inset key="imageInsets" minX="0.0" minY="30" maxX="0.0" maxY="15"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wTo-o6-E6g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="126" y="-662"/>
         </scene>
-        <!--Item5-->
+        <!--View Controller-->
         <scene sceneID="WKs-iB-dGB">
             <objects>
                 <viewController id="WgP-dm-tT2" sceneMemberID="viewController">
@@ -52,7 +55,9 @@
                         <viewLayoutGuide key="safeArea" id="GDu-DE-pAu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item5" id="jp7-PQ-672"/>
+                    <tabBarItem key="tabBarItem" title="" image="마이1.png" selectedImage="마이2.png" id="jp7-PQ-672">
+                        <inset key="imageInsets" minX="0.0" minY="30" maxX="0.0" maxY="15"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H9s-yS-yMv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -63,7 +68,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="M2s-Ye-t6q" customClass="MyTabBarCtrl" customModule="yanolja" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dfh-Jl-bio" customClass="MyTabBar" customModule="yanolja" customModuleProvider="target">
+                    <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="dfh-Jl-bio" customClass="MyTabBar" customModule="yanolja" customModuleProvider="target">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -79,7 +84,7 @@
             </objects>
             <point key="canvasLocation" x="125.95419847328243" y="4.9295774647887329"/>
         </scene>
-        <!--Item2-->
+        <!--View Controller-->
         <scene sceneID="lsF-au-pFk">
             <objects>
                 <viewController id="cJQ-zg-i7Y" sceneMemberID="viewController">
@@ -89,7 +94,9 @@
                         <viewLayoutGuide key="safeArea" id="eiY-qw-FFi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item2" id="ERM-Sq-WJd"/>
+                    <tabBarItem key="tabBarItem" title="" image="내주변1" selectedImage="내주변2.png" id="ERM-Sq-WJd">
+                        <inset key="imageInsets" minX="0.0" minY="30" maxX="0.0" maxY="15"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4RH-cn-BhA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,7 +119,20 @@
             <point key="canvasLocation" x="1053" y="694"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="dfh-Jl-bio">
+            <size key="intrinsicContentSize" width="-1" height="83"/>
+        </designable>
+    </designables>
     <resources>
+        <image name="내주변1" width="69" height="87"/>
+        <image name="내주변2.png" width="69" height="87"/>
+        <image name="마이1.png" width="49" height="86"/>
+        <image name="마이2.png" width="47" height="87"/>
+        <image name="지역1.png" width="43" height="89"/>
+        <image name="지역2.png" width="43" height="89"/>
+        <image name="찜1.png" width="50" height="85"/>
+        <image name="찜2.png" width="48" height="86"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

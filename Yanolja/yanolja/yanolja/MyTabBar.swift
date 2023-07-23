@@ -10,7 +10,7 @@ class MyTabBar: UITabBar {
         shapeLayer.path = createPath()
         shapeLayer.strokeColor = UIColor.lightGray.cgColor
         shapeLayer.fillColor = UIColor.white.cgColor
-        shapeLayer.lineWidth = 1.0
+        shapeLayer.lineWidth = 0
         
         // 그림자 설정
         shapeLayer.shadowOffset = CGSize(width: 0, height: 0)
@@ -35,7 +35,7 @@ class MyTabBar: UITabBar {
     
     // 탭 바의 모양을 정의하기 위한 경로를 생성합니다.
     func createPath() -> CGPath {
-        let height: CGFloat = 37.0
+        let height: CGFloat = 37.0 // 꺾인 정도
         let path = UIBezierPath()
         let centerWidth = self.frame.width / 2
         
@@ -44,12 +44,12 @@ class MyTabBar: UITabBar {
         path.addLine(to: CGPoint(x: (centerWidth - height * 2), y: 0))
         
         path.addCurve(to: CGPoint(x: centerWidth, y: height),
-                      controlPoint1: CGPoint(x: (centerWidth - 30), y: 0),
-                      controlPoint2: CGPoint(x: centerWidth - 35, y: height))
+                      controlPoint1: CGPoint(x: (centerWidth - 8), y: 0),
+                      controlPoint2: CGPoint(x: centerWidth - 10, y: height))
         
         path.addCurve(to: CGPoint(x: (centerWidth + height * 2), y: 0),
-                      controlPoint1: CGPoint(x: centerWidth + 35, y: height),
-                      controlPoint2: CGPoint(x: (centerWidth + 30), y: 0))
+                      controlPoint1: CGPoint(x: centerWidth + 10, y: height),
+                      controlPoint2: CGPoint(x: (centerWidth + 8), y: 0))
         
         path.addLine(to: CGPoint(x: self.frame.width, y: 0))
         path.addLine(to: CGPoint(x: self.frame.width, y: self.frame.height))
