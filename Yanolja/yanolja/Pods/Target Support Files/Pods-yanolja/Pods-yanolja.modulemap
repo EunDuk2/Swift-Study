@@ -1,0 +1,6 @@
+framework module Pods_yanolja {
+  umbrella header "Pods-yanolja-umbrella.h"
+
+  export *
+  module * { export * }
+}

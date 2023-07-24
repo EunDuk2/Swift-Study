@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61814FB22A6E6D7D00BAD52E /* Gifu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61814FB12A6E6D7D00BAD52E /* Gifu.framework */; };
+		61814FB62A6E781C00BAD52E /* ya.gif in Resources */ = {isa = PBXBuildFile; fileRef = 61814FB52A6E781C00BAD52E /* ya.gif */; };
 		61C993712A6D1F6F003990C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C993702A6D1F6F003990C5 /* AppDelegate.swift */; };
 		61C993732A6D1F6F003990C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C993722A6D1F6F003990C5 /* SceneDelegate.swift */; };
 		61C993752A6D1F6F003990C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C993742A6D1F6F003990C5 /* ViewController.swift */; };
@@ -24,11 +26,14 @@
 		61C993A22A6D4370003990C5 /* 찜1.png in Resources */ = {isa = PBXBuildFile; fileRef = 61C993A02A6D4370003990C5 /* 찜1.png */; };
 		61C993A52A6D44EC003990C5 /* 마이1.png in Resources */ = {isa = PBXBuildFile; fileRef = 61C993A32A6D44EC003990C5 /* 마이1.png */; };
 		61C993A62A6D44EC003990C5 /* 마이2.png in Resources */ = {isa = PBXBuildFile; fileRef = 61C993A42A6D44EC003990C5 /* 마이2.png */; };
-		61C993A82A6D47C1003990C5 /* ya_gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 61C993A72A6D47C1003990C5 /* ya_gif.gif */; };
 		61C993AA2A6D4B6D003990C5 /* ya.mov in Resources */ = {isa = PBXBuildFile; fileRef = 61C993A92A6D4B6D003990C5 /* ya.mov */; };
+		BBDA3D0D062E0537EAA513CD /* Pods_yanolja.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 918664F826EE8FBBD2B774B1 /* Pods_yanolja.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C753AC663157415356DBD5C /* Pods-yanolja.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yanolja.debug.xcconfig"; path = "Target Support Files/Pods-yanolja/Pods-yanolja.debug.xcconfig"; sourceTree = "<group>"; };
+		61814FB12A6E6D7D00BAD52E /* Gifu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Gifu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61814FB52A6E781C00BAD52E /* ya.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ya.gif; sourceTree = "<group>"; };
 		61C9936D2A6D1F6F003990C5 /* yanolja.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yanolja.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C993702A6D1F6F003990C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61C993722A6D1F6F003990C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,8 +53,9 @@
 		61C993A02A6D4370003990C5 /* 찜1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "찜1.png"; sourceTree = "<group>"; };
 		61C993A32A6D44EC003990C5 /* 마이1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "마이1.png"; sourceTree = "<group>"; };
 		61C993A42A6D44EC003990C5 /* 마이2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "마이2.png"; sourceTree = "<group>"; };
-		61C993A72A6D47C1003990C5 /* ya_gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ya_gif.gif; sourceTree = "<group>"; };
 		61C993A92A6D4B6D003990C5 /* ya.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = ya.mov; sourceTree = "<group>"; };
+		918664F826EE8FBBD2B774B1 /* Pods_yanolja.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yanolja.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0303E3ABFB61394AFA62E70 /* Pods-yanolja.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yanolja.release.xcconfig"; path = "Target Support Files/Pods-yanolja/Pods-yanolja.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,18 +63,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61814FB22A6E6D7D00BAD52E /* Gifu.framework in Frameworks */,
+				BBDA3D0D062E0537EAA513CD /* Pods_yanolja.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61814F772A6E669C00BAD52E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61814FB12A6E6D7D00BAD52E /* Gifu.framework */,
+				918664F826EE8FBBD2B774B1 /* Pods_yanolja.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		61C993642A6D1F6F003990C5 = {
 			isa = PBXGroup;
 			children = (
 				61C993882A6D2635003990C5 /* images */,
 				61C9936F2A6D1F6F003990C5 /* yanolja */,
 				61C9936E2A6D1F6F003990C5 /* Products */,
+				61814F772A6E669C00BAD52E /* Frameworks */,
+				A610D1257013998A665DE7AF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,11 +126,20 @@
 				61C9939C2A6D3D69003990C5 /* 지역2.png */,
 				61C9938B2A6D2729003990C5 /* ya.png */,
 				61C993982A6D3C5B003990C5 /* 내주변1.png */,
+				61814FB52A6E781C00BAD52E /* ya.gif */,
 				61C993972A6D3C5B003990C5 /* 내주변2.png */,
-				61C993A72A6D47C1003990C5 /* ya_gif.gif */,
 				61C993A92A6D4B6D003990C5 /* ya.mov */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		A610D1257013998A665DE7AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C753AC663157415356DBD5C /* Pods-yanolja.debug.xcconfig */,
+				D0303E3ABFB61394AFA62E70 /* Pods-yanolja.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,9 +149,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61C993812A6D1F70003990C5 /* Build configuration list for PBXNativeTarget "yanolja" */;
 			buildPhases = (
+				9A6F68769FF7061B7E19E0F5 /* [CP] Check Pods Manifest.lock */,
 				61C993692A6D1F6F003990C5 /* Sources */,
 				61C9936A2A6D1F6F003990C5 /* Frameworks */,
 				61C9936B2A6D1F6F003990C5 /* Resources */,
+				D77B92500E3455B356577D1B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -174,13 +204,13 @@
 			files = (
 				61C993A12A6D4370003990C5 /* 찜2.png in Resources */,
 				61C9939D2A6D3D69003990C5 /* 지역1.png in Resources */,
-				61C993A82A6D47C1003990C5 /* ya_gif.gif in Resources */,
 				61C9937D2A6D1F70003990C5 /* LaunchScreen.storyboard in Resources */,
 				61C9939E2A6D3D69003990C5 /* 지역2.png in Resources */,
 				61C993A52A6D44EC003990C5 /* 마이1.png in Resources */,
 				61C993A62A6D44EC003990C5 /* 마이2.png in Resources */,
 				61C9937A2A6D1F70003990C5 /* Assets.xcassets in Resources */,
 				61C993AA2A6D4B6D003990C5 /* ya.mov in Resources */,
+				61814FB62A6E781C00BAD52E /* ya.gif in Resources */,
 				61C993782A6D1F6F003990C5 /* Main.storyboard in Resources */,
 				61C993992A6D3C5B003990C5 /* 내주변2.png in Resources */,
 				61C993A22A6D4370003990C5 /* 찜1.png in Resources */,
@@ -190,6 +220,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9A6F68769FF7061B7E19E0F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-yanolja-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D77B92500E3455B356577D1B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-yanolja/Pods-yanolja-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-yanolja/Pods-yanolja-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-yanolja/Pods-yanolja-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		61C993692A6D1F6F003990C5 /* Sources */ = {
@@ -342,6 +414,7 @@
 		};
 		61C993822A6D1F70003990C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C753AC663157415356DBD5C /* Pods-yanolja.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -370,6 +443,7 @@
 		};
 		61C993832A6D1F70003990C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0303E3ABFB61394AFA62E70 /* Pods-yanolja.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

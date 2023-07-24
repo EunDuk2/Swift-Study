@@ -1,0 +1,16 @@
+PODS:
+  - Gifu (3.3.1)
+
+DEPENDENCIES:
+  - Gifu
+
+SPEC REPOS:
+  trunk:
+    - Gifu
+
+SPEC CHECKSUMS:
+  Gifu: 416d4e38c4c2fed012f019e0a1d3ffcb58e5b842
+
+PODFILE CHECKSUM: 4efcd3f6740ce299146f5d941b753a2c0f22a6e2
+
+COCOAPODS: 1.12.1

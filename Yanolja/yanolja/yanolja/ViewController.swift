@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Gifu
 
 class ViewController: UIViewController {
 
@@ -18,7 +19,11 @@ class ViewController: UIViewController {
     func makeButton() {
         let button = CustomButton(type: .custom)
         button.frame = CGRect(x: 167, y: -10, width: 60, height: 60)
-        button.setBackgroundImage(UIImage(named: "ya.png"), for: .normal)
+        
+        let gifImageView = GIFImageView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
+        gifImageView.animate(withGIFNamed: "ya.gif")
+        button.addSubview(gifImageView)
+        
         button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
 
         if let tabBar = self.tabBarController?.tabBar {
@@ -31,6 +36,7 @@ class ViewController: UIViewController {
     }
 
 }
+
 
 class CustomButton: UIButton {
     // 버튼을 터치할 때 이미지의 축소 비율
