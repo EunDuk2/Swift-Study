@@ -227,7 +227,7 @@ enum PopupPosition: String {
     case top = "Top"
     case bottom = "Bottom"
     case left = "Left"
-    case right = "Rigth"
+    case right = "Right"
     case center = "Center"
     case none = ""
 }
