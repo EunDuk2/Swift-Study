@@ -17,15 +17,18 @@ class ViewController: UIViewController {
         makeButton()
     }
     func makeButton() {
-        let button = CustomButton(type: .custom)
-        button.frame = CGRect(x: 167, y: -10, width: 60, height: 60)
+        let button = CustomButton(type: .custom) // 커스텀 버튼
+        button.frame = CGRect(x: 167, y: -10, width: 60, height: 60) // 위치와 크기
         
+        // gif를 설정해주고 버튼에 서브뷰로 추가
         let gifImageView = GIFImageView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
         gifImageView.animate(withGIFNamed: "ya.gif")
         button.addSubview(gifImageView)
         
+        // 버튼에 액션 추가
         button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
 
+        // 탭바 위에 버튼 추가
         if let tabBar = self.tabBarController?.tabBar {
             tabBar.addSubview(button)
         }

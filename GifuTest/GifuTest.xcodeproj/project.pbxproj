@@ -13,9 +13,11 @@
 		61814FA22A6E6BD600BAD52E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61814FA02A6E6BD600BAD52E /* Main.storyboard */; };
 		61814FA42A6E6BD800BAD52E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61814FA32A6E6BD800BAD52E /* Assets.xcassets */; };
 		61814FA72A6E6BD800BAD52E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61814FA52A6E6BD800BAD52E /* LaunchScreen.storyboard */; };
+		F52A18CC456561CEF9822714 /* Pods_GifuTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 959EBDB98EB351FC6AAB79AD /* Pods_GifuTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1566525A056DD32D52C7DC39 /* Pods-GifuTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GifuTest.release.xcconfig"; path = "Target Support Files/Pods-GifuTest/Pods-GifuTest.release.xcconfig"; sourceTree = "<group>"; };
 		61814F972A6E6BD600BAD52E /* GifuTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GifuTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61814F9A2A6E6BD600BAD52E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61814F9C2A6E6BD600BAD52E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		61814FA32A6E6BD800BAD52E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61814FA62A6E6BD800BAD52E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61814FA82A6E6BD800BAD52E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		959EBDB98EB351FC6AAB79AD /* Pods_GifuTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifuTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AECE5B237AEF75F3018DEEF1 /* Pods-GifuTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GifuTest.debug.xcconfig"; path = "Target Support Files/Pods-GifuTest/Pods-GifuTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F52A18CC456561CEF9822714 /* Pods_GifuTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				61814F992A6E6BD600BAD52E /* GifuTest */,
 				61814F982A6E6BD600BAD52E /* Products */,
+				9E63E698F08FA72D823C8188 /* Pods */,
+				908D58F5E9FBF034CA705A82 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = GifuTest;
 			sourceTree = "<group>";
 		};
+		908D58F5E9FBF034CA705A82 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				959EBDB98EB351FC6AAB79AD /* Pods_GifuTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E63E698F08FA72D823C8188 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AECE5B237AEF75F3018DEEF1 /* Pods-GifuTest.debug.xcconfig */,
+				1566525A056DD32D52C7DC39 /* Pods-GifuTest.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61814FAB2A6E6BD800BAD52E /* Build configuration list for PBXNativeTarget "GifuTest" */;
 			buildPhases = (
+				A7B0A75858B77C37B358AC74 /* [CP] Check Pods Manifest.lock */,
 				61814F932A6E6BD600BAD52E /* Sources */,
 				61814F942A6E6BD600BAD52E /* Frameworks */,
 				61814F952A6E6BD600BAD52E /* Resources */,
+				C425E31B3B90D4D4C98B054E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A7B0A75858B77C37B358AC74 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GifuTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C425E31B3B90D4D4C98B054E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GifuTest/Pods-GifuTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GifuTest/Pods-GifuTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GifuTest/Pods-GifuTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		61814F932A6E6BD600BAD52E /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		61814FAC2A6E6BD800BAD52E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AECE5B237AEF75F3018DEEF1 /* Pods-GifuTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +380,7 @@
 		};
 		61814FAD2A6E6BD800BAD52E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1566525A056DD32D52C7DC39 /* Pods-GifuTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
